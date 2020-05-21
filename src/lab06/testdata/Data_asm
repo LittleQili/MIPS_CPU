@@ -51,7 +51,10 @@ sltiu $3 if ($1<ffffC000)
 sw [$3+1] = $2
 sw [$3+2] = $1
 lw $4 = [$3+1]
-lw $4 = [$3+1]
+lw $4 = [$3+2]
+sll $5 = $4 << 2
+srl $6 = $4 >> 8
+srl $7 = $4 >> 16
 beq to last inst(pc+FFFF<<2) $1 $2;not branch
 bne to last inst(pc+FFFF<<2) $1 $4;not branch
 ;beq to last inst(pc+FFFF<<2) $1 $4

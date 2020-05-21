@@ -1,8 +1,7 @@
 `timescale 1ns / 1ps
 
 module Ctr(
-    input [5:0] opCode,
-	input [5:0] func,
+    input [31:0] inst,
 	
     output reg aluSrcA,
 	output reg aluSrcB,
@@ -23,13 +22,21 @@ module Ctr(
 	output reg retu//jr
     );
     
-    always @(opCode or func)
+    always @(inst)
 	begin
-		case(opCode)
+		if (inst == 0)
+		begin
+			aluSrcA = 0;aluSrcB = 0;aluCtr = 4'b0000;ext = 0;
+			regDst = 0; memToReg = 0;regWrite = 0;
+			memRead = 0;memWrite = 0;
+			branch = 0;jump = 0;link = 0;retu = 0;bequal = 0;
+		end
+		else begin
+		case(inst[31:26])
 		//R type
 		6'b000000:
 		begin
-			case(func)
+			case(inst[5:0])
 			6'b100000://add
 			begin
 				aluSrcA = 0;aluSrcB = 0;aluCtr = 4'b0001;ext = 0;
@@ -274,7 +281,8 @@ module Ctr(
 			branch = 0;jump = 0;link = 0;retu = 0;bequal = 0;
 		end
 	   endcase
-    end
+		end
+	end
     
 endmodule
 

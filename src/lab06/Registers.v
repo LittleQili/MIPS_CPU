@@ -14,8 +14,9 @@ module Registers(
     output reg [31:0] readData2
     );
 	reg [31:0] regFile [31:0];
+	reg write31;
 	
-	always @ (readReg1 or readReg2 or writeReg)
+	always @ (readReg1 or readReg2 or writeReg or regFile[readReg1] or regFile[readReg2])
 	begin
 		readData1 = regFile[readReg1];
 		readData2 = regFile[readReg2];
@@ -23,6 +24,7 @@ module Registers(
 		
 	always @ (negedge Clk)
 	begin
+		if(link == 0)write31 <= 0;
 		if(reset == 0&&regWrite == 1)
 		begin
 			if(link == 1&&writeReg == 31) regFile[31] <= writeLink;
@@ -32,7 +34,11 @@ module Registers(
 	
 	always @ (writeLink or link)
 	begin
-		if(link == 1) regFile[31] <= writeLink;
+		if(link == 1&&write31 == 0)
+		begin
+			regFile[31] = writeLink;
+			write31 = 1;
+		end
 	end
 	
     always @ (reset)
@@ -47,6 +53,11 @@ module Registers(
         regFile[20] = 0;regFile[21] = 0;regFile[22] = 0;regFile[23] = 0;
         regFile[24] = 0;regFile[25] = 0;regFile[26] = 0;regFile[27] = 0;
         regFile[28] = 0;regFile[29] = 0;regFile[30] = 0;regFile[31] = 0;
+		write31 = 0;
 		end
     end
+	
+	initial begin
+		write31 = 0;
+	end
 endmodule

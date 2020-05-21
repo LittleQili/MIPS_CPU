@@ -14,7 +14,7 @@ module Top_tb(
 	always #(PERIOD) Clk = ~Clk;
 	
 	initial begin
-		Clk = 1;
+		Clk = 0;
 		reset = 1;
 		#2;
 		reset = 0;

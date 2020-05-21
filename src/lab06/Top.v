@@ -8,7 +8,7 @@ module Top(
 	wire [31:0] jmpDst;
 	wire stall;
 	wire nop;
-	wire targetAddr;
+	wire [31:0] targetAddr;
 	
 	wire [31:0] IF_pc_write;
 	wire [31:0] IF_pc;
@@ -92,7 +92,7 @@ module Top(
 	wire WB_memToReg;
 	wire WB_regWrite;
 	
-	wire WB_CalRes;
+	wire [31:0] WB_CalRes;
 	
 	//IF
 	PC myPC(
@@ -155,8 +155,7 @@ module Top(
     );
 	
 	Ctr myCtr(
-    .opCode(ID_inst[31:26]),
-	.func(ID_inst[5:0]),
+    .inst(ID_inst),
 	
     .aluSrcA(ID_aluSrcA),
 	.aluSrcB(ID_aluSrcB),

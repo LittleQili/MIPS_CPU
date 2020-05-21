@@ -56,6 +56,10 @@ module ForwardingCtr(
 					 end
 			end
 		end
+		else begin
+		choice = 2'b00;
+		stall = 0;
+		end
 	end
 	
 	initial begin
