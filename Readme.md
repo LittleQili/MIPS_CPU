@@ -10,5 +10,5 @@ For 2020-CS145 course
 
 ❗  ❗  ❗  Any forms of copying code is strictly prohibited.
 
-肝没了，告辞。
+肝没了，文档什么的下次一定😂
 
