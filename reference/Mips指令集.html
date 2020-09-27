@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="middle" height="30">MIPS 指令集(共31条）</td>
+  </tr>
+  <tr>
+    <td align="middle"></td>
+  </tr>
+  <tr>
+    <td height="15"></td>
+  </tr>
+  <tr>
+    <td id="fontzoom" height="200" valign="top"><table align="center" bgcolor="#ffffff" border="0" bordercolor="#cccccc" cellpadding="0" cellspacing="0" width="95%">
+        <tbody>
+          <tr>
+            <td><table border="1" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td colspan="10" bgcolor="#33CCFF"><p align="center"><strong><span lang="EN-US" xml:lang="EN-US">MIPS 指令集(共31条）</span></strong></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33CCFF"><p align="center"><strong>助记符</strong><strong><span lang="EN-US" xml:lang="EN-US"> </span></strong></p></td>
+                  <td colspan="6" bgcolor="#33CCFF"><p align="center"><strong>指令格式</strong><strong><span lang="EN-US" xml:lang="EN-US"> </span></strong></p></td>
+                  <td bgcolor="#33CCFF"><p align="center"><strong>示例</strong><strong><span lang="EN-US" xml:lang="EN-US"> </span></strong></p></td>
+                  <td bgcolor="#33CCFF"><p align="center"><strong>示例含义</strong><strong><span lang="EN-US" xml:lang="EN-US"> </span></strong></p></td>
+                  <td bgcolor="#33CCFF"><p align="center"><strong>操作及其解释</strong><strong><span lang="EN-US" xml:lang="EN-US"> </span></strong></p></td>
+                </tr>
+                <tr>
+                  <td width="49" bgcolor="#0099FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">Bit #</span></p></td>
+                  <td width="42" bgcolor="#FF99FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">31..26</span></p></td>
+                  <td width="42" bgcolor="#FF99FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">25..21</span></p></td>
+                  <td width="42" bgcolor="#FF99FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">20..16</span></p></td>
+                  <td width="42" bgcolor="#FF99FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">15..11</span></p></td>
+                  <td width="41" bgcolor="#FF99FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">10..6</span></p></td>
+                  <td width="42" bgcolor="#FF99FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">5..0</span></p></td>
+                  <td bgcolor="#FF99FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FF99FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FF99FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#0099FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">R-type</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">op</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">shamt</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">func</span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">add</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100000</span></p></td>
+                  <td width="105" bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> add $1,$2,$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td width="100" bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2+$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td width="403" bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rs + rt   ；其中rs＝$2，rt=$3, rd=$1</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">addu</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100001</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> addu $1,$2,$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2+$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rs + rt   ；其中rs＝$2，rt=$3, rd=$1,无符号数</span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">sub</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100010</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> sub $1,$2,$3 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2-$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rs - rt   ；其中rs＝$2，rt=$3, rd=$1</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">subu</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100011</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> subu $1,$2,$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2-$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rs - rt   ；其中rs＝$2，rt=$3, rd=$1,无符号数</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">and</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100100</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> and $1,$2,$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2 &amp; $3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rs &amp; rt   ；其中rs＝$2，rt=$3, rd=$1</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">or</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100101</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> or $1,$2,$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2 | $3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rs | rt   ；其中rs＝$2，rt=$3, rd=$1</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">xor</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100110</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> xor $1,$2,$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2 ^ $3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rs xor rt   ；其中rs＝$2，rt=$3, rd=$1(异或）</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">nor</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100111</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> nor $1,$2,$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=~($2 | $3)</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- not(rs | rt)   ；其中rs＝$2，rt=$3, rd=$1(或非）</span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">slt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">101010</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> slt $1,$2,$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if($2&lt;$3) <br />
+                    $1=1 else<br />
+                    $1=0</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if (rs &lt; rt) rd=1 else rd=0 ；其中rs＝$2，rt=$3, rd=$1</span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">sltu</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">101011</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> sltu $1,$2,$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if($2&lt;$3) <br />
+                    $1=1 else<br />
+                    $1=0</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if (rs &lt; rt) rd=1 else rd=0 ；其中rs＝$2，rt=$3, rd=$1<br />
+                    (无符号数）</span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">sll</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">shamt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> sll $1,$2,10</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2&lt;&lt;10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rt &lt;&lt; shamt  ；shamt存放移位的位数，<br />
+                    也就是指令中的立即数，其中rt=$2, rd=$1 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">srl</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">shamt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000010</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> srl $1,$2,10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2&gt;&gt;10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rt &gt;&gt; shamt ；(logical) ，其中rt=$2, rd=$1 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">sra</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">shamt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000011</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> sra $1,$2,10</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2&gt;&gt;10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rt &gt;&gt; shamt  ；(arithmetic) 注意符号位保留<br />
+                    其中rt=$2, rd=$1 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">sllv</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000100</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> sllv $1,$2,$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2&lt;&lt;$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rt &lt;&lt; rs  ；其中rs＝$3，rt=$2, rd=$1</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">srlv</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000110</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> srlv $1,$2,$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2&gt;&gt;$3</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rt &gt;&gt; rs  ；(logical)其中rs＝$3，rt=$2, rd=$1</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">srav</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rd</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000111</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> srav $1,$2,$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2&gt;&gt;$3</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rd &lt;- rt &gt;&gt; rs  ；(arithmetic) 注意符号位保留<br />
+                    其中rs＝$3，rt=$2, rd=$1 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">jr</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001000</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> jr $31</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> goto $31</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> PC &lt;- rs</span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#0099FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">I-type</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">op</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">addi</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> addi $1,$2,100</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2+100</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rt &lt;- rs + (sign-extend)immediate ；其中rt=$1,rs=$2</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">addiu</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001001</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US">addiu $1,$2,100</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2+100</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rt &lt;- rs + (zero-extend)immediate ；其中rt=$1,rs=$2</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">andi</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001100</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> andi $1,$2,10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2 &amp; 10 </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rt &lt;- rs &amp; (zero-extend)immediate ；其中rt=$1,rs=$2</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">ori</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001101</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> andi $1,$2,10</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2 | 10 </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rt &lt;- rs | (zero-extend)immediate ；其中rt=$1,rs=$2</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">xori</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001110</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> andi $1,$2,10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=$2 ^ 10</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rt &lt;- rs xor (zero-extend)immediate ；其中rt=$1,rs=$2</span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">lui</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001111</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">00000</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> lui $1,100</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=100*65536</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rt &lt;- immediate*65536 ；将16位立即数放到目标寄存器高16<br />
+                    位，目标寄存器的低16位填0 </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">lw</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">100011</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> lw $1,10($2)</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $1=memory[$2<br />
+                    +10]</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> rt &lt;- memory[rs + (sign-extend)immediate] ；rt=$1,rs=$2</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">sw</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">101011</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> sw $1,10($2)</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> memory[$2+10]<br />
+                    =$1 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> memory[rs + (sign-extend)immediate] &lt;- rt ；rt=$1,rs=$2</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">beq</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000100</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> beq $1,$2,10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if($1==$2) </span><span lang="EN-US" xml:lang="EN-US"><br />
+                    goto PC+4+40</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if (rs == rt) PC &lt;- PC+4 + (sign-extend)immediate&lt;&lt;2 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">bne</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000101</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> bne $1,$2,10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if($1!=$2)<br />
+                    goto PC+4+40</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if (rs != rt) PC &lt;- PC+4 + (sign-extend)immediate&lt;&lt;2 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">slti</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001010</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> slti $1,$2,10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if($2&lt;10) <br />
+                    $1=1 else<br />
+                    $1=0</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if (rs &lt;(sign-extend)immediate) rt=1 else rt=0 ；<br />
+                    其中rs＝$2，rt=$1</span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">sltiu</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">001011</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rs</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">rt</span></p></td>
+                  <td colspan="3" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">immediate</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> sltiu $1,$2,10</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if($2&lt;10) <br />
+                    $1=1 else<br />
+                    $1=0</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> if (rs &lt;(zero-extend)immediate) rt=1 else rt=0 ；<br />
+                    其中rs＝$2，rt=$1</span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#0099FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">J-type</span></p></td>
+                  <td bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">op</span></p></td>
+                  <td colspan="5" bgcolor="#FF00FF"><p align="center"><span lang="EN-US" xml:lang="EN-US">address</span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FF00FF"><p><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">j</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000010</span></p></td>
+                  <td colspan="5" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">address</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> j 10000</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> goto 10000</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> PC &lt;- (PC+4)[31..28],address,0,0   ；address=10000/4</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#33FF00"><p align="center"><span lang="EN-US" xml:lang="EN-US">jal</span></p></td>
+                  <td bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">000011</span></p></td>
+                  <td colspan="5" bgcolor="#CCCCCC"><p align="center"><span lang="EN-US" xml:lang="EN-US">address</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> jal 10000</span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $31&lt;-PC+4;<br />
+                    goto 10000 </span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                  <td bgcolor="#FFFF00"><p><span lang="EN-US" xml:lang="EN-US"> $31&lt;-PC+4；PC &lt;- (PC+4)[31..28],address,0,0<br />
+                    ；address=10000/4</span><span lang="EN-US" xml:lang="EN-US"> </span></p></td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+        </tbody>
+      </table>
+      注意：因为MIPS16只有16个16位的寄存器，所以JAL指令中$31改成$15, 所有立即数均无需扩展，LUI指令直接就是将立即数付给RT寄存器。
+    </p></td>
+  </tr>
+</table>
+</body>
+</html>
